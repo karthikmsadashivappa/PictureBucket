@@ -8,10 +8,57 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.css" />
     <title>Picture Bucket</title>
   </head>
   <body>
-    <i class="fas fa-upload"></i>
+    <section class="main-wrapper">
+      <div class="wrapper">
+        <div class="main-heading">
+          Are you looking to upload an Image ???
+        </div>
+        <div class="fileDropZone">
+          <div class="image-wrapper">
+            <img
+              src="https://cdn.shopify.com/shopifycloud/web/assets/v1/145631fc8b27cb714d69ad317a13c295.svg"
+              alt=""
+            />
+          </div>
+          <div class="add-file">
+            <div
+              class="add-file-button"
+              onclick="$('.file-upload-input').trigger( 'click' )"
+            >
+              Add file
+            </div>
+          </div>
+          <div class="drag-drop">
+            <input
+              class="file-upload-input"
+              type="file"
+              onchange="readURL(this);"
+              accept="image/*"
+            />
+            <div class="drag-elem">or drop files to upload</div>
+          </div>
+        </div>
+      </div>
+      <div class="preview">
+        <div class="file-upload-content">
+          <img class="file-upload-image" src="#" alt="your image" />
+          <div class="image-title-wrap">
+            <div type="button" onclick="removeUpload()" class="remove-image">
+              Remove <span class="image-title">Uploaded Image</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="/js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
